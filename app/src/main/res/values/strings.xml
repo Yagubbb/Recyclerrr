@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Recycler</string>
+    <string name="app_score">%1s pts</string>
+    <string name="app_level">level %1s</string>
+</resources>

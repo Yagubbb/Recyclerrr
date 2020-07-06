@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/place"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/item_default_margin"
+        android:gravity="center"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.1" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/image_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/item_default_margin"
+        app:strokeWidth="1dp"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="@id/place"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toEndOf="@id/place"
+        app:layout_constraintTop_toTopOf="@id/place"
+        app:layout_constraintWidth_percent="0.1">
+
+        <ImageView
+            android:id="@+id/image_view_profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sample" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/text_view_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/item_default_margin"
+        android:gravity="center_vertical"
+        android:textColor="#6a6577"
+        android:textSize="@dimen/item_default_text_size"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/image_container"
+        app:layout_constraintTop_toTopOf="@+id/image_container"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:layout_marginTop="@dimen/item_gap_margin"
+        android:progress="25"
+
+        app:layout_constraintBottom_toBottomOf="@id/image_container"
+        app:layout_constraintEnd_toEndOf="@id/text_view_name"
+        app:layout_constraintStart_toStartOf="@id/text_view_name"
+        app:layout_constraintTop_toBottomOf="@id/text_view_name" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/item_default_margin"
+        android:textSize="@dimen/item_default_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/text_view_name"
+        app:layout_constraintTop_toTopOf="@id/text_view_name" />
+
+    <TextView
+        android:id="@+id/level"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/item_gap_margin"
+        android:textColor="#6a6577"
+        android:textSize="@dimen/item_default_text_size"
+        app:layout_constraintBottom_toBottomOf="@id/progress_bar"
+        app:layout_constraintEnd_toEndOf="@id/score"
+        app:layout_constraintStart_toStartOf="@id/score"
+        app:layout_constraintTop_toBottomOf="@id/score" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="#272e40"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
